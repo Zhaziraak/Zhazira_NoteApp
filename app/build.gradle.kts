@@ -51,11 +51,11 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     //Navigation
-    val navVersion = "2.7.7"
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.navigation.ui.ktx)
 
     //Lottie Animation
     val lottieVersion = "3.6.1"
-    implementation ("com.airbnb.android:lottie:$lottieVersion")
+    implementation (libs.lottie)
+        //implementation(kotlin("script-runtime"))
 }
