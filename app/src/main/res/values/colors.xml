@@ -6,4 +6,8 @@
     <color name="txt_start">#8E8B8B</color>
     <color name="dot_grey">#C4C4C4</color>
     <color name="dot_orange">#D88B02</color>
+    <color name="grey_title_back">#131212</color>
+    <color name="grey_text">#B1B1B1</color>
+    <color name="grey_search">#505050</color>
+    <color name="orange_btn_plus">#D88B02</color>
 </resources>
