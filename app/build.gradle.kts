@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -57,5 +58,9 @@ dependencies {
     //Lottie Animation
     val lottieVersion = "3.6.1"
     implementation (libs.lottie)
-        //implementation(kotlin("script-runtime"))
+
+    //Room
+    val roomVersion = "2.6.1"
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 }

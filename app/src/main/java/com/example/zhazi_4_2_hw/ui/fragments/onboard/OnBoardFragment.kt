@@ -40,18 +40,7 @@ class OnBoardFragment : Fragment() {
         click()
     }
 
-    private fun click() = with(binding.viewpager2) {
-        binding.txtSkip.setOnClickListener {
-            if (currentItem < 3) {
-                setCurrentItem(currentItem + 2, true)
-            }
-        }
-        binding.txtStart.setOnClickListener {
-            if (binding.viewpager2.currentItem == 2) {
-                findNavController().navigate(R.id.noteFragment)
-            }
-        }
-    }
+
 
 
     private fun initialize() {
@@ -84,13 +73,25 @@ class OnBoardFragment : Fragment() {
         saveSharPref()
     }
 
-    private fun tabLayout() = with(binding) {
-        TabLayoutMediator(tabLayout, viewpager2) { tab, position -> }.attach()
-    }
-
     private fun saveSharPref() {
         PreferenceHelper.onBoardShow = true
     }
 
+    private fun tabLayout() = with(binding) {
+        TabLayoutMediator(tabLayout, viewpager2) { tab, position -> }.attach()
+    }
+
+    private fun click() = with(binding.viewpager2) {
+        binding.txtSkip.setOnClickListener {
+            if (currentItem < 3) {
+                setCurrentItem(currentItem + 2, true)
+            }
+        }
+        binding.txtStart.setOnClickListener {
+            if (binding.viewpager2.currentItem == 2) {
+                findNavController().navigate(R.id.noteFragment)
+            }
+        }
+    }
 }
 
